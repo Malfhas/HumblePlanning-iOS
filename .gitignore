@@ -1,0 +1,13 @@
+.DS_Store
+xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+.build/
+.swiftpm/
+Packages/HumbleCore/.build/
+Packages/HumbleCore/.swiftpm/
+*.ipa
+*.dSYM.zip
+dist/
+node_modules/

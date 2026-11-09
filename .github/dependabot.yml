@@ -1,0 +1,12 @@
+# Weekly updates of the GitHub Actions; the app has no third-party dependency.
+# Security updates are opened as soon as an advisory is published.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github-actions:
+        patterns: ["*"]
