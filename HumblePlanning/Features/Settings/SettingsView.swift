@@ -139,7 +139,7 @@ struct SettingsView: View {
                 Banner(text: testResult ? String(localized: .alertsTestSent) : String(localized: .alertsTestNotDelivered),
                        tone: testResult ? .info : .warning, systemImage: testResult ? "checkmark.circle" : nil)
             }
-            Toggle(isOn: Binding(get: { user.mobilePushNotifications && user.mobilePushNotificationsUser }, set: setAlerts)) {
+            Toggle(isOn: Binding(get: { user.mobilePushNotifications && user.mobilePushNotificationsUser }, set: { setAlerts($0) })) {
                 Text(.alertsOnPhone)
                 Text(user.mobilePushNotifications ? String(localized: .alertsOnPhoneHelp) : String(localized: .alertsOffByAdmin))
             }

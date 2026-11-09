@@ -25,7 +25,7 @@ struct FilterSheet: View {
         NavigationStack {
             Form {
                 Section(String(localized: .filterPeople)) {
-                    SwiftUI.Picker(String(localized: .filterPeople), selection: Binding(get: { filter.people }, set: choosePeople)) {
+                    SwiftUI.Picker(String(localized: .filterPeople), selection: Binding(get: { filter.people }, set: { choosePeople($0) })) {
                         Text(.filterMe).tag(PeopleFilter.mine)
                         Text(.filterEveryone).tag(PeopleFilter.all)
                         Text(.filterPick).tag(PeopleFilter.specific)
